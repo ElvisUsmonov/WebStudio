@@ -1,19 +1,65 @@
 @import url(reset.css);
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body{
     font-family: "Roboto", sans-serif;
     font-size: 14px;
 }
 
 .container{
-    width: 1170px;
+    width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+}
+:root{
+    --grey-color: #757575;
+    --blue-color: #2196F3;
+    --white-color: #fff;
+    --dark-blue-color: #2F303A;
+    --light-grey-color: #F5F4FA;
+    --black-color: #000;
+    --orange-color: #F39121;
+    --header-border: #ECECEC;
+    --card-border: #EEEEEE;
+    --title-text: #212121;
 }
 
 /* HEADER */
 .header {
     padding: 24px 0 25px;
+    border-bottom: var(--header-border) solid 1px;
 }
 .header-container {
     display: flex;
@@ -35,20 +81,24 @@ body{
 .phone {
     display: inline-block;
     font-size: 14px;
-    color: #757575;
+    color: var(--grey-color);
 }
 a{
-    color: black;
+    color: var(--black-color);
     text-decoration: none;
 }
 a:hover{
-    color: #2196F3;
+    color: var(--blue-color);
+}
+
+.header-link.active{
+    text-decoration: underline orange 3px;
 }
 
 /* HERO */
 
 .hero {
-    background: #2F303A;
+    background: var(--dark-blue-color);
 }
 .hero-container {
     min-height: 600px;
@@ -59,7 +109,7 @@ a:hover{
     
 }
 .hero-title {
-    color: #fff;
+    color: var(--white-color);
     font-size: 44px;
     line-height: 60px;
     text-transform: uppercase;
@@ -72,16 +122,16 @@ a:hover{
     min-width: 200px;
     font-size: 16px;
     padding: 10px 0;
-    background: #2196F3;
-    color: #fff;
+    background: var(--blue-color);
+    color: var(--white-color);
     border-radius: 4%;
     margin-top: 30px;
 }
 
 .btn:hover{
     cursor: pointer;
-    background: #fff;
-    color: #2196F3;
+    background: var(--white-color);
+    color: var(--blue-color);
 }
 
 /* INFO */
@@ -102,7 +152,7 @@ a:hover{
 }
 .info-card-desc {
     margin-top: 10px;
-    color: #757575;
+    color: var(--grey-color);
     line-height: 24px;
 }
 
@@ -140,7 +190,7 @@ a:hover{
 /* TEAM */
 
 .team {
-    background: #F5F4FA;
+    background: var(--light-grey-color);
     padding: 94px 0;
 }
 .team-block {
@@ -165,7 +215,7 @@ a:hover{
 }
 .team-card {
     text-align: center;
-    background: #fff;
+    background: var(--white-color);
 }
 .team-card-img {
     object-fit: cover;
@@ -180,15 +230,15 @@ a:hover{
 .profession {
     font-size: 16px;
     font-weight: 400;
-    color: #757575;
+    color: var(--grey-color);
 }
 
 /* FOOTER */
 
 .footer {
-    background: #2F303A;
+    background: var(--dark-blue-color);
     padding: 60px 0;
-    color: #fff;
+    color: var(--white-color);
 }
 .footer-logo {
     margin-bottom: 20px;
@@ -200,5 +250,62 @@ a:hover{
 }
 .footer-text ul li a{
     opacity: 0.6;
-    color: #fff;
+    color: var(--white-color);
+}
+
+/* PORTFOLIO PAGE */
+
+/* PROJECTS */
+.portfolio-projects {
+    margin: 94px 0;
+}
+.projects {
+    justify-content: center;
+}
+.filters {
+    display: flex;
+    margin-bottom: 50px;
+    font-size: 0;
+    gap: 8px;
+    justify-content: center;
+}
+.filter-button {
+    background: var(--light-grey-color);
+    padding: 6px 27px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.filter-button:hover{
+    background: var(--blue-color);
+    color: var(--white-color);
+}
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+.project-card {
+    border: var(--card-border) solid 1px;
+}
+.project-img {
+    height: 100%;
+    width: 100%;
+}
+.project-card-desc {
+    padding: 20px 24px;
+}
+.project-card-title {
+    font-size: 18px;
+    line-height: 36px;
+    padding-bottom: 4px;
+    font-weight: 700;
+    color: var(--title-text);
+}
+.project-card-filter {
+    line-height: 30px;
+    font-size: 16px;
+    color: var(--grey-color);
 }
