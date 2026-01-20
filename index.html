@@ -13,11 +13,27 @@
                 <a href="index.html" class="header-logo">
                     <img src="images/logo.svg" alt="logo" width="145" height="31">
                 </a>
-                <nav class="header-nav">
-                    <a href="#" class="header-link active">Studio</a>
-                    <a href="portfolio.html" class="header-link">Portfolio</a>
-                    <a href="#" class="header-link">Contacts</a>
-                </nav>
+                <ul class="header-nav">
+                    <li class="header-nav-item"><a href="#" class="header-link active">Studio</a></li>
+                    <li class="header-nav-item"><a href="portfolio.html" class="header-link">Portfolio</a></li>
+                    <li class="header-nav-item"><a href="#" class="header-link">Contacts</a></li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-link">Filters</a>
+                        <ul>
+                            <li class="pop-up"><a href="#">All</a></li>
+                            <li class="pop-up"><a href="#">Web sites</a></li>
+                            <li class="pop-up"><a href="#">Applications</a></li>
+                            <li class="pop-up"><a href="#">Design</a></li>
+                            <li class="pop-up">
+                                <a href="#">Marketing</a>
+                                <ul class="pop-up-list">
+                                    <li><a href="#">info@devstudio.com</a></li>
+                                    <li><a href="#">+38 096 111 11 11</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                 <div class="contacts">
                     <a href="#" class="gmail">info@devstudio.com</a>
                     <p class="phone">+38 096 111 11 11</p>
@@ -56,9 +72,24 @@
             <div class="container doing-gallery">
                 <h2 class="doing-title">What are we doing</h2>
                 <div class="doing-photoes">
-                    <div class="doing-photo"><img src="images/doing-img-1.jpg" alt="photo" width="370" height="294"></div>
-                    <div class="doing-photo"><img src="images/doing-img-2.jpg" alt="photo" width="370" height="294"></div>
-                    <div class="doing-photo"><img src="images/doing-img-3.jpg" alt="photo" width="370" height="294"></div>
+                    <div class="doing-photo">
+                        <img src="images/doing-img-1.jpg" alt="photo" width="370" height="294">
+                        <div class="doing-photo-desc">
+                            <p>Desktop applications</p>
+                        </div>
+                    </div>
+                    <div class="doing-photo">
+                        <img src="images/doing-img-2.jpg" alt="photo" width="370" height="294">
+                        <div class="doing-photo-desc">
+                            <p>Mobile applications</p>
+                        </div>
+                    </div>
+                    <div class="doing-photo">
+                        <img src="images/doing-img-3.jpg" alt="photo" width="370" height="294">
+                        <div class="doing-photo-desc">
+                            <p>Design solutions</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -60,6 +60,8 @@ body{
 .header {
     padding: 24px 0 25px;
     border-bottom: var(--header-border) solid 1px;
+    position: relative;
+    z-index: 5;
 }
 .header-container {
     display: flex;
@@ -69,6 +71,46 @@ body{
     display: flex;
     margin-left: 93px;
     gap: 50px;
+}
+.header-nav-item{
+    position: relative;
+}
+.header-nav-item li{
+    border-top: 1px solid #fff;
+    background: var(--dark-blue-color);
+}
+.header-nav-item li:first-child{
+    border-top: none;
+}
+.header-nav-item li a{
+    color: var(--white-color);
+    padding: 10px 20px;
+    display: block;
+}
+.header-nav-item li a:hover{
+    color: var(--blue-color);
+}
+.header-nav > li > ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding-top: 34px;
+}
+.header-nav-item:hover > ul{
+    display: block;
+}
+.pop-up{
+    position: relative;
+}
+.pop-up:hover > .pop-up-list{
+    display: block;
+}
+.pop-up-list {
+    position: absolute;
+    top: 0;
+    right: 101%;
+    display: none;
 }
 .contacts {
     font-size: 0;
@@ -98,7 +140,14 @@ a:hover{
 /* HERO */
 
 .hero {
-    background: var(--dark-blue-color);
+    background: url("../images/hero-img.jpg") no-repeat 50%/cover;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
 }
 .hero-container {
     min-height: 600px;
@@ -106,7 +155,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
 }
 .hero-title {
     color: var(--white-color);
@@ -126,6 +175,7 @@ a:hover{
     color: var(--white-color);
     border-radius: 4%;
     margin-top: 30px;
+    line-height: 30px;
 }
 
 .btn:hover{
@@ -145,8 +195,46 @@ a:hover{
 }
 .info-card {
     flex: 1 1 25%;
+    position: relative;
+}
+.info-card:nth-child(1)::before{
+    background: var(--light-grey-color) url(../images/antenna_1.png) no-repeat 50%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 270px;
+    height: 120px;
+    border-radius: 4%;
+}
+.info-card:nth-child(2)::before{
+    background: var(--light-grey-color) url(../images/clock_2.png) no-repeat 50%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 270px;
+    height: 120px;
+    border-radius: 4%;
+}
+.info-card:nth-child(3)::before{
+    background: var(--light-grey-color) url(../images/diagram_3.png) no-repeat 50%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 270px;
+    height: 120px;
+    border-radius: 4%;
+}
+.info-card:nth-child(4)::before{
+    background: var(--light-grey-color) url(../images/astronaut_4.png) no-repeat 50%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 270px;
+    height: 120px;
+    border-radius: 4%;
 }
 .info-card-title {
+    margin-top: 150px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -178,9 +266,30 @@ a:hover{
     gap: 30px;
 }
 .doing-photo {
-    height: 370px;
+    height: 294px;
+    position: relative;
+    
 }
-
+.doing-photo-desc{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-blue-color);
+    height: 70px;
+    margin-top: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(47, 48, 58, 0.8);
+}
+.doing-photo-desc p{
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
 .doing-photo img{
     width: 100%;
     height: 100%;
@@ -289,16 +398,19 @@ a:hover{
     border: var(--card-border) solid 1px;
     flex: 1 1 30%;
 }
-.project-img:hover div{
+.project-img:hover div .description{
     opacity: 1;
 }
 .title-img{
     position: relative;
 }
+.project-img-box {
+    position: relative;
+    overflow: hidden;
+}
 .description{
     position: absolute;
     inset: 0;
-    height: 294px;
     background: rgb(33, 150, 243, .9);
     color: var(--white-color);
     font-size: 18px;
@@ -312,8 +424,9 @@ a:hover{
 }
 .project-img img{
     width: 100%;
-    height: 294px;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 .project-card-desc {
     padding: 20px 24px;
