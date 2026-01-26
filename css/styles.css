@@ -349,9 +349,7 @@ a:hover{
 }
 .social-item a:hover{
     background: var(--blue-color);
-}
-.social-item a:hover .item{
-    color: var(--white-color);
+    --socials-color: #fff;
 }
 .item{
     width: 20px;
@@ -368,16 +366,14 @@ a:hover{
 
 /* REGULAR CUSTOMERS */
 .customers-container{
-    padding: 94px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 94px 15px;
     align-items: center;
 }
 .customers-title{
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 50px;
+    text-align: center;
 }
 .customers-socials{
     margin-top: 16px;
@@ -388,23 +384,17 @@ a:hover{
     gap: 30px;
 }
 .customers-social-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1 1 16%;
 }
 .customers-social-item a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     border: solid 1px var(--socials-color);
     border-radius: 4px;
-    padding: 16px 32px;
+    padding: 16px;
 }
 .customers-social-item a:hover{
-    border: solid 1px var(--blue-color);
-}
-.customers-social-item a:hover .customers-item{
-    color: var(--blue-color);
+    --socials-color: #2196f3;
 }
 .customers-item{
     width: 106px;
