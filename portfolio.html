@@ -10,7 +10,46 @@
     <title>WebStudio | Portfolio</title>
 </head>
 <body>
-    <header class="header">
+    <aside class="menu">
+        <div class="menu-inactive">
+            <ul>
+                <li class="menu-links">
+                    <a href="index.html">
+                        <svg class="menu-link">
+                            <use href="images/menu-studio.svg"></use>
+                        </svg>
+                        <p>Studio</p>
+                    </a>
+                </li>
+                <li class="menu-links">
+                    <a href="portfolio.html">
+                        <svg class="menu-link">
+                            <use href="images/menu-portfolio.svg"></use>
+                        </svg>
+                        <p>Portfolio</p>
+                    </a>
+                </li>
+                <li class="menu-links">
+                    <a href="#">
+                        <svg class="menu-link">
+                            <use href="images/menu-contacts.svg"></use>
+                        </svg>
+                        <p>Contacts</p>
+                    </a>
+                </li>
+                <li class="menu-links">
+                    <a href="#">
+                        <svg class="menu-link">
+                            <use href="images/menu-filters.svg"></use>
+                        </svg>
+                        <p>Filters</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div class="wrapper">
+        <header class="header">
         <div class="container">
             <div class="header-container">
                 <a href="index.html" class="header-logo">
@@ -36,6 +75,7 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="header-nav-item"><a href="form.html" class="header-link">Form</a></li>
                 </ul>
                 <div class="contacts">
                     <a href="#" class="gmail">info@devstudio.com</a>
@@ -45,44 +85,6 @@
         </div>
     </header>
     <main>
-        <section class="menu">
-            <div class="menu-inactive">
-                <ul>
-                    <li class="menu-links">
-                        <a href="#">
-                            <svg class="menu-link">
-                                <use href="images/menu-studio.svg"></use>
-                            </svg>
-                            <p>Studio</p>
-                        </a>
-                    </li>
-                    <li class="menu-links">
-                        <a href="#">
-                            <svg class="menu-link">
-                                <use href="images/menu-portfolio.svg"></use>
-                            </svg>
-                            <p>Portfolio</p>
-                        </a>
-                    </li>
-                    <li class="menu-links">
-                        <a href="#">
-                            <svg class="menu-link">
-                                <use href="images/menu-contacts.svg"></use>
-                            </svg>
-                            <p>Contacts</p>
-                        </a>
-                    </li>
-                    <li class="menu-links">
-                        <a href="#">
-                            <svg class="menu-link">
-                                <use href="images/menu-filters.svg"></use>
-                            </svg>
-                            <p>Filters</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
         <section class="portfolio-projects">
             <div class="container projects">
                 <div class="filters">
@@ -281,6 +283,7 @@
             </div>
         </div>
     </footer>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
         <symbol viewBox="0 0 49 49" fill="none" id="menu-studio">
             <g clip-path="url(#clip0_112_724)">
